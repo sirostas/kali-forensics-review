@@ -1,0 +1,21 @@
+{% extends "layout.nunjucks" %}
+
+{% block customTitle %}
+  <title>Binwalk</title>
+{% endblock %}
+
+{% block content %}
+<div class="content">
+<h1 class="title is-1">Binwalk</h1>
+<p class="has-text-justified">Этот инструмент используется при работе с бинарными образами, он имеет возможность находить встроенный файл и исполняемый код, исследуя файл образа. Это очень мощный инструмент для тех, кто знает, что они делают, его можно использовать для поиска конфиденциальной информации которая может быть использована для обнаружения взлома.</p>
+<p class="has-text-justified">Утилита написана на python и использует библиотеку libmagic, что делает его годным к использованию с magic-сигнатурами. Работает с сжатыми или заархивированные файлами, заголовками, файловыми системами, ядром Linux и т.д. Для облегчения работы в нем имеется файл подписей, который содержит наиболее часто встречающиеся подписи.</p>
+
+<p class="is-italic">Источник: <a href="https://habr.com/company/hosting-cafe/blog/315278/" target="_blank">https://habr.com/company/hosting-cafe/blog/315278/</a></p>
+</div>
+
+{% endblock %}
+
+{% block menuWithActiveLink %}
+  {% import "macros/menu.nunjucks" as menu %}
+  {{ menu.active('binwalk') }}
+{% endblock %}

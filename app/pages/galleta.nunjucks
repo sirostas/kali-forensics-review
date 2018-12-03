@@ -1,0 +1,19 @@
+{% extends "layout.nunjucks" %}
+
+{% block customTitle %}
+  <title>Galleta</title>
+{% endblock %}
+
+{% block content %}
+<div class="content">
+<h1 class="title is-1">Galleta</h1>
+<p>Исследует в криминалистических целях содержимое кукиз IE.</p>
+<p class="is-italic">Источник: <a href="https://habr.com/company/hosting-cafe/blog/315278/" target="_blank">https://habr.com/company/hosting-cafe/blog/315278/</a></p>
+</div>
+
+{% endblock %}
+
+{% block menuWithActiveLink %}
+  {% import "macros/menu.nunjucks" as menu %}
+  {{ menu.active('galleta') }}
+{% endblock %}

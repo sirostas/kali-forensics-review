@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <title>Bulk Extractor</title>
+
+  <link rel="stylesheet" href="css/bulma.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <div class="header-image"></div>
+  <div class="main columns is-centered">
+    <div class="column is-half">
+      
+<div class="content">
+<h1 class="title is-1">Bulk Extractor</h1>
+<p class="has-text-justified">Утилита Bulk extractor (BE) написана на C++, позволяет сканировать как обычные HDD, SSD, так и оптические носители, карты памяти, дампы оперативной памяти и сниффера. Bulk Extractor позволяет быстро извлекать разного рода информацию с помощью сканеров (почта, номер кредитной карты, GPS координаты, номера телефонов, EXIF данные в изображениях). Быстрота работы достигается за счет использования многопоточности и работы с жестким диском «напрямую».</p>
+
+<p class="has-text-justified">Утилита представляет собой «цепочку» сканеров, которая поддерживает рекурсивный поиск, позволяющий передавать результаты работы одного сканера на вход всей цепочки для более детального анализа. Принцип работы «рекурсивного поиска» в BE изображен на рисунке 1.</p>
+<div class="has-text-centered">
+  <figure><img src="images/bulkextractor.png"></img></figure>
+</div>
+<p class="has-text-centered">Рисунок 1. Схема рекурсивного поиска данных</p>
+
+<p class="has-text-justified">C помощью Bulk_extractor на основе данных, полученных из файла файл гибернации «hiberfil.sys», можно построить диаграмму сети (BE автоматически извлекает MAC и IP адреса).</p>
+<h3 class="title is-3">Пример.</h3>
+<h4 class="title is-4">Условие:</h4>
+<p class="has-text-justified">1 января 2013 года в ходе оперативно-розыскных мероприятий было изъято оборудование: ноутбук фирмы ASUS с серийным номером # M1KH18gHW; устройство для изготовления пластиковых карт; PCMCIA карта; внешняя антенна 802.11b/g. Есть подозрение, что с помощью этого компьютера одним из участников преступной кибер группировки была осуществлена оплата хостинга, служащего для распространения вредоносного программного обеспечения. Оплата производилась с помощью кредитной карты c номером **** **** **** 5782. Необходимо найти полный номер карты.</p>
+<h4 class="title is-4">Решение: </h4>
+<p class="has-text-justified">С помощью консольной утилиты «dd» и аппаратного блокиратора записи был создан побитовый образ жесткого диска подозреваемого.</p>
+<p class="has-text-justified">На вход утилиты Bulk Extractor был передан созданный побитовый образ, а также «stop list», после чего процесс работы утилиты начался. Ход работы изображен на рисунке 2.</p>
+<div class="has-text-centered">
+  <figure><img src="images/bulkextractor2.png"></img></figure>
+</div>
+<p class="has-text-centered">Рисунок 2. Ход работы Bulk_extractor</p>
+<p class="has-text-justified">Файл «stop lists» содержит информацию, которая не должна включаться в итоговый отчет: email адреса разработчиков Linux, телефоны технической поддержки Microsoft и т.д.</p>
+<p class="has-text-justified">После работы утилиты мы получаем подробный отчет по каждому сканеру в виде текстового (txt) файла, а также найденные дампы сетевого траффика (PCAP). Пример отчета изображен на рисунке 3.</p>
+<div class="has-text-centered">
+  <figure><img src="images/bulkextractor3.png"></img></figure>
+</div>
+<p class="has-text-centered">Рисунок 3. Отчеты</p>
+<p class="has-text-justified">Bulk Extractor’ом с помощью сканера «ссn.txt» был найден полный номер карты: 4099772205925782. Результаты работы сканера «ccn.txt» изображены на рисунке 4.</p>
+<div class="has-text-centered">
+  <figure><img src="images/bulkextractor4.png"></img></figure>
+</div>
+<p class="has-text-centered">Рисунок 4. Результаты работы сканера «ccn.txt»</p>
+
+<p>Что и требовалось доказать.</p>
+<p class="has-text-justified">Стоит отметить, что данная утилита одна из лучших в своем роде, является бесплатной, мультиплатформенной и работает со всеми известными типами дампов памяти, например, E01, RAW, Split-raw и AFF.</p>
+
+<p class="is-italic">Источник: <a href="http://www.rosint.net/articles/72/188/" target="_blank">http://www.rosint.net/articles/72/188/</a></p>
+</div>
+
+
+    </div>
+    <div class="column is-one-quarter">
+      
+  
+  
+<aside class="menu">
+<a href="index.html" class=" home-anchor" >Главная</a>
+<ul class="menu-list">
+  
+  <p class="menu-label">Инструменты</p>
+  <li><a href="autopsy.html" class="">Autopsy</a></li>
+  <li><a href="binwalk.html" class="">Binwalk</a></li>
+  <li><a href="bulkextractor.html" class=" is-active ">Bulk Extractor</a></li>
+  <li><a href="chkrootkit.html" class="">Chkrootkit</a></li>
+  <li><a href="foremost.html" class="">Foremost</a></li>
+  <li><a href="galleta.html" class="">Galleta</a></li>
+  <li><a href="hashdeep.html" class="">Hashdeep</a></li>
+  <li><a href="volafox.html" class="">Volafox</a></li>
+  <li><a href="volatility.html" class="">Volatility</a></li>
+</ul>
+</aside>
+
+
+    </div>
+  </div>
+  <footer>
+  <hr>
+  <div class="columns">
+    <div class="column is-3 is-offset-3">
+      <p>Индивидуальный проект по дисциплине "Расследование инцидентов", преподаватель Котов Э.М.</p>
+    </div>
+    <div class="column is-3 is-offset-1">
+      <p>Выполнили студенты группы КТсо4-5 Хабаров О.П. и Жданов С.А.</p>
+    </div>
+  </div>
+  <div class="columns is-centered">
+    <div class="column is-half">
+      <p class="has-text-centered">ИКТИБ ЮФУ, 2018</p> 
+    </div> 
+  </div>
+</footer>
+</body>
+</html>

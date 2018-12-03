@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  {% block customTitle %} {% endblock %}
+  <link rel="stylesheet" href="css/bulma.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <div class="header-image"></div>
+  <div class="main columns is-centered">
+    <div class="column is-half">
+      {% block content %} {% endblock %}
+    </div>
+    <div class="column is-one-quarter">
+      {% block menuWithActiveLink %} {% endblock %}
+    </div>
+  </div>
+  {% include "partials/footer.nunjucks" %}
+</body>
+</html>

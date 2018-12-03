@@ -1,0 +1,16 @@
+<aside class="menu">
+<a class="home-anchor" href="index.html">Главная</a>
+<ul class="menu-list">
+  
+  <p class="menu-label">Инструменты</p>
+  <li><a href="autopsy.html">Autopsy</a></li>
+  <li><a href="binwalk.html">Binwalk</a></li>
+  <li><a href="bulkextractor.html">Bulk Extractor</a></li>
+  <li><a href="chkrootkit.html">Chkrootkit</a></li>
+  <li><a href="foremost.html">Foremost</a></li>
+  <li><a href="galleta.html">Galleta</a></li>
+  <li><a href="hashdeep.html">Hashdeep</a></li>
+  <li><a href="volafox.html">Volafox</a></li>
+  <li><a href="volatility.html">Volatility</a></li>
+</ul>
+</aside>

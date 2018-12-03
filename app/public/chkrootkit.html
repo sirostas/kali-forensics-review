@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <title>Chkrootkit</title>
+
+  <link rel="stylesheet" href="css/bulma.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <div class="header-image"></div>
+  <div class="main columns is-centered">
+    <div class="column is-half">
+      
+<div class="content">
+<h1 class="title is-1">Chkrootkit</h1>
+<p class="has-text-justified">Chkrootkit — это сокращение от словосочетания «check rootkit» (поиск руткитов). В свою очередь руткитами называются вредоносные приложения, разработанные для скрытого проникновения на сервер и маскировки под обычные процессы или программы, с целью получения полного доступа на сервер.</p>
+
+<p class="has-text-justified">Шелл-скрипт chkrootkit разработан в помощь системным администраторам для проверки системы на наличие известных руткитов. Первый же вопрос, который может возникнуть при этой информации: А почему шелл? Почему не perl или bash, как тот же rkunter? Разработчики стремились максимально унифицировать скрипт, чтобы он запускался на всех системах с шеллом. А во времена начала разработки скрипта, тот же perl был далеко не везде.</p>
+
+<p class="has-text-justified">Суть поиска проста. С помощью системных инструментов типа strings и grep (если быть более точным, то в FAQ на сайте разработчика указан список используемых программ — awk, cut, echo, egrep, find, head, id, ls, netstat, ps, strings, sed, uname) chkrootkit ищет подозрительные участки кода в программах, сравнивает запущенные процессы с информацией из /proc, выявляя расхождения.</p>
+
+<p>Инструмент состоит из некоторого количества модулей, отвечающие за разные методы проверки</p>
+
+<ul>
+  <li class="has-text-justified">chkrootkit: шелл-скрипт, проверяющий системные бинарные файлы на модификацию руткитами.</li>
+  <li class="has-text-justified">ifpromisc.c: модуль поиска интерфейсов, работающих на перехват пакетов.</li>
+  <li class="has-text-justified">chklastlog.c: модуль, проверяющий на наличие фактов удаления записей из лог-файла lastlog.</li>
+  <li class="has-text-justified">chkwtmp.c: аналогично предыдущему модулю, проверяет лог-файл wtmp.</li>
+  <li class="has-text-justified">chkutmp.c: проверяет лог-файл utmp на наличие следов удаления записей.</li>
+  <li class="has-text-justified">check_wtmpx.c: актуально для ОС Solaris. проверяет факт удаления записей из лога wtmpx.</li>
+  <li class="has-text-justified">chkproc.c: поиск следов известных LKM-троянов (Linux Kernel Module).</li>
+  <li class="has-text-justified">chkdirs.c: поиск следов известных LKM-троянов (Linux Kernel Module).</li>
+  <li class="has-text-justified">strings.c: аналог утилиты strings.</li>
+</ul>
+<p>Увы, поиск фактов удаления строк из лог-файлов не гарантирован на все 100%.</p>
+
+<p class="is-italic">Источник: <a href="https://habr.com/company/first/blog/243487/" target="_blank">https://habr.com/company/first/blog/243487/</a></p>
+</div>
+
+
+    </div>
+    <div class="column is-one-quarter">
+      
+  
+  
+<aside class="menu">
+<a href="index.html" class=" home-anchor" >Главная</a>
+<ul class="menu-list">
+  
+  <p class="menu-label">Инструменты</p>
+  <li><a href="autopsy.html" class="">Autopsy</a></li>
+  <li><a href="binwalk.html" class="">Binwalk</a></li>
+  <li><a href="bulkextractor.html" class="">Bulk Extractor</a></li>
+  <li><a href="chkrootkit.html" class=" is-active ">Chkrootkit</a></li>
+  <li><a href="foremost.html" class="">Foremost</a></li>
+  <li><a href="galleta.html" class="">Galleta</a></li>
+  <li><a href="hashdeep.html" class="">Hashdeep</a></li>
+  <li><a href="volafox.html" class="">Volafox</a></li>
+  <li><a href="volatility.html" class="">Volatility</a></li>
+</ul>
+</aside>
+
+
+    </div>
+  </div>
+  <footer>
+  <hr>
+  <div class="columns">
+    <div class="column is-3 is-offset-3">
+      <p>Индивидуальный проект по дисциплине "Расследование инцидентов", преподаватель Котов Э.М.</p>
+    </div>
+    <div class="column is-3 is-offset-1">
+      <p>Выполнили студенты группы КТсо4-5 Хабаров О.П. и Жданов С.А.</p>
+    </div>
+  </div>
+  <div class="columns is-centered">
+    <div class="column is-half">
+      <p class="has-text-centered">ИКТИБ ЮФУ, 2018</p> 
+    </div> 
+  </div>
+</footer>
+</body>
+</html>

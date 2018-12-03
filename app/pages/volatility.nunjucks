@@ -1,0 +1,31 @@
+{% extends "layout.nunjucks" %}
+
+{% block customTitle %}
+  <title>Volatility</title>
+{% endblock %}
+
+{% block content %}
+<div class="content">
+<h1 class="title is-1">Volaitility</h1>
+<p class="has-text-justified">Volaitility - фреймворк для исследования образов содержимого оперативной памяти и извлечения цифровых артефактов из энергозависимой памяти (RAM).</p>
+<p>Извлекаемые данные:</p>
+<ul>
+  <li>дата и время;</li>
+  <li>список запущенных процессов;</li>
+  <li>список открытых сетевых сокетов;</li>
+  <li>список открытых сетевых соединений;</li>
+  <li>список загруженных библиотек для каждого процесса;</li>
+  <li>имена открытых файлов для каждого процесса;</li>
+  <li>адреса памяти;</li>
+  <li>модули ядра ОС;</li>
+  <li>маппинг физических смещений на виртуальные адреса.</li>
+</ul>
+<p class="is-italic">Источник: <a href="https://habr.com/post/327740/" target="_blank">https://habr.com/post/327740/</a></p>
+</div>
+
+{% endblock %}
+
+{% block menuWithActiveLink %}
+  {% import "macros/menu.nunjucks" as menu %}
+  {{ menu.active('volatility') }}
+{% endblock %}

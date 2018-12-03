@@ -1,0 +1,34 @@
+{% extends "layout.nunjucks" %}
+
+{% block customTitle %}
+  <title>Autopsy</title>
+{% endblock %}
+
+{% block content %}
+<div class="content">
+<h1 class="title is-1">Autopsy</h1>
+<p class="has-text-justified">Autopsy — программа с открытым исходным кодом и графическим интерфейсом для эффективного криминалистического исследования жестких дисков и смартфонов. Тысячи людей пользуются Autopsy, чтобы разобраться в том, что же действительно случилось с компьютером.</p>
+<img src="images/autopsy.png"></img>
+<p>Специалисты крупных компаний и военные широко применяют Autopsy в работе. Ниже некоторые из функций Autopsy:</p>
+<ul>
+  <li>анализ электронных писем;</li>
+  <li>определение типа файла;</li>
+  <li>воспроизведение мультимедиа;</li>
+  <li>анализ реестра;</li>
+  <li>восстановление фотографий с карты памяти;</li>
+  <li>извлечение информации о геолокации и фотоаппарате из JPEG-файлов;</li>
+  <li>извлечение данных о сетевой активности из браузера;</li>
+  <li>отображение системных событий в графическом интерфейсе;</li>
+  <li>хронологический анализ;</li>
+  <li>извлечение данных из устройств на Android: SMS, журнал звонков, контакты, и т.д.</li>
+</ul>
+<p>С помощью инструмента можно генерировать отчеты в форматах HTML и XLS.</p>
+<p class="is-italic">Источник: <a href="https://habr.com/company/hosting-cafe/blog/315278/" target="_blank">https://habr.com/company/hosting-cafe/blog/315278/</a></p>
+</div>
+
+{% endblock %}
+
+{% block menuWithActiveLink %}
+  {% import "macros/menu.nunjucks" as menu %}
+  {{ menu.active('autopsy') }}
+{% endblock %}

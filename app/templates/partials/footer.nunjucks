@@ -1,0 +1,16 @@
+<footer>
+  <hr>
+  <div class="columns">
+    <div class="column is-3 is-offset-3">
+      <p>Индивидуальная работа по дисциплине "Расследование инцидентов", преподаватель Котов Э.М.</p>
+    </div>
+    <div class="column is-3 is-offset-1">
+      <p>Выполнили студенты группы КТсо4-5 Хабаров О.П. и Жданов С.А.</p>
+    </div>
+  </div>
+  <div class="columns is-centered">
+    <div class="column is-half">
+      <p class="has-text-centered">ИКТИБ ЮФУ, 2018</p> 
+    </div> 
+  </div>
+</footer>

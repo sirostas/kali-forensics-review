@@ -1,0 +1,18 @@
+{% macro active(activePage='home') %}
+<aside class="menu">
+<a href="index.html" class="{%if activePage == 'home' %} is-active {% endif %} home-anchor" >Главная</a>
+<ul class="menu-list">
+  
+  <p class="menu-label">Инструменты</p>
+  <li><a href="autopsy.html" class="{%if activePage == 'autopsy' %} is-active {% endif %}">Autopsy</a></li>
+  <li><a href="binwalk.html" class="{%if activePage == 'binwalk' %} is-active {% endif %}">Binwalk</a></li>
+  <li><a href="bulkextractor.html" class="{%if activePage == 'bulkextractor' %} is-active {% endif %}">Bulk Extractor</a></li>
+  <li><a href="chkrootkit.html" class="{%if activePage == 'chkrootkit' %} is-active {% endif %}">Chkrootkit</a></li>
+  <li><a href="foremost.html" class="{%if activePage == 'foremost' %} is-active {% endif %}">Foremost</a></li>
+  <li><a href="galleta.html" class="{%if activePage == 'galleta' %} is-active {% endif %}">Galleta</a></li>
+  <li><a href="hashdeep.html" class="{%if activePage == 'hashdeep' %} is-active {% endif %}">Hashdeep</a></li>
+  <li><a href="volafox.html" class="{%if activePage == 'volafox' %} is-active {% endif %}">Volafox</a></li>
+  <li><a href="volatility.html" class="{%if activePage == 'volatility' %} is-active {% endif %}">Volatility</a></li>
+</ul>
+</aside>
+{% endmacro %}

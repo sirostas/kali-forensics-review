@@ -1,0 +1,19 @@
+{% extends "layout.nunjucks" %}
+
+{% block customTitle %}
+  <title>Главная</title>
+{% endblock %}
+
+{% block content %}
+<h1 class="title is-1">Kali Forensics Mode</h1>
+<p>Kali Linux является передовым Linux дистрибутивом для проведения тестирования на проникновение и аудита безопасности.</p>
+<p>Kali является полной повторной сборкой BackTrack Linux — www.backtrack-linux.org, Вся новая инфраструктура была пересмотрена, все инструменты были проанализированы</p>
+<p>Более 300 инструментов для проведения тестирования на проникновение:<br>
+После рассмотрения каждого инструмента, который был включен в BackTrack, мы устранили большое количество инструментов, которые либо не работают или дублируют другие инструменты, с похожей функциональностью.</p>
+
+{% endblock %}
+
+{% block menuWithActiveLink %}
+  {% import "macros/menu.nunjucks" as menu %}
+  {{ menu.active('home') }}
+{% endblock %}

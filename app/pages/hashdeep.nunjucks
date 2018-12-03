@@ -1,0 +1,29 @@
+{% extends "layout.nunjucks" %}
+
+{% block customTitle %}
+  <title>Hashdeep</title>
+{% endblock %}
+
+{% block content %}
+<div class="content">
+<h1 class="title is-1">Hashdeep</h1>
+<p class="has-text-justified">По названию понятно что эта программа предназначена для работы с хешами, а именно с вычислением. Может выполнить поиск файлов по известным хешам, или отображать файлы не совпадающие с задаными хешами. Одной из сильных сторон является выполнение рекурсивных хеш-вычислений с использованием множества алгоритмов, которые являются неотъемлемой частью времени.</p>
+<p class="has-text-justified">hashdeep — это кроссплатформенный инструмент для вычисления хешей или дайджестов сообщений для любого числа файлов, поддерживает рекурсивный обход структуры директорий. Также может искать файлы по известным хешам, либо отображать файлы, которые не совпадают с введёнными хешами. Поддерживаются хеши MD5, SHA-1, SHA-256, Tiger и Whirlpool hashes.</p>
+<p class="has-text-justified">hashdeep — это новое название, которое программа получила после того, как поддержка всех хешей была объединена в один исполнимый файл. Ранее программа называлась md5deep, к которой в виде отдельных программ постепенно были добавлены:</p>
+<ul>
+  <li>sha1deep</li>
+  <li>sha256deep</li>
+  <li>sha3deep</li>
+  <li>tigerdeep</li>
+  <li>whirlpooldeep</li>
+</ul>
+<p>В некоторых системах программа md5deep или даже все перечисленные программы устанавливаются вместе с hashdeep.</p>
+<p class="is-italic">Источник: <a href="https://kali.tools/?p=3833" target="_blank">https://kali.tools/?p=3833</a></p>
+</div>
+
+{% endblock %}
+
+{% block menuWithActiveLink %}
+  {% import "macros/menu.nunjucks" as menu %}
+  {{ menu.active('hashdeep') }}
+{% endblock %}
